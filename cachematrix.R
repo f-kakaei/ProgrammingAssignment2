@@ -1,8 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+#############################################################
+## makeCacheMatrix() and  cacheSolve() are used to cache the 
+## inverse of an inversible matrix
+##
 
-## Write a short comment describing this function
-
+## gets an inversible matrix and retuens a list containing
+## functions to get/set the matrix itself and it's inverse
+##
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y) {
@@ -18,8 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## gets a cached matrix (a list that is the retuen value of makeCacheMatrix())
+## and returns the inverse of the matrix. if the inverse is calculated before
+## just retuens it and does not recalculate it. 
+## 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         inv <- x$getInverse ()
